@@ -22,6 +22,15 @@ DEVICE_PATH := device/xiaomi/chiron
 # Kernel
 TARGET_KERNEL_CONFIG := chiron_defconfig
 
+# Set header version for bootimage
+ifneq ($(strip $(TARGET_KERNEL_APPEND_DTB)),true)
+# Enable DTB in bootimage and set header version
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_BOOTIMG_HEADER_VERSION := 2
+else
+BOARD_BOOTIMG_HEADER_VERSION := 1
+endif
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := chiron
 
