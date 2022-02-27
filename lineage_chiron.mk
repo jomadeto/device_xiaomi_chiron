@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,9 +30,14 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 2
 PRODUCT_MANUFACTURER := Xiaomi
 
+PRODUCT_SYSTEM_DEVICE := chiron
+PRODUCT_SYSTEM_NAME := chiron
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=chiron \
+    TARGET_PRODUCT=chiron \
     PRIVATE_BUILD_DESC="chiron-user 8.0.0 OPR1.170623.027 V9.5.4.0.ODEMIFA release-keys"
 
 BUILD_FINGERPRINT := Xiaomi/chiron/chiron:8.0.0/OPR1.170623.027/V9.5.4.0.ODEMIFA:user/release-keys
